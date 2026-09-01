@@ -69,7 +69,8 @@ function Home() {
             height={1080}
             className="size-full object-cover"
           />
-          <div className="absolute inset-0 bg-forest/78" />
+          <div className="absolute inset-0 bg-forest/85" />
+          <div className="absolute inset-0 bg-linear-to-r from-forest/80 via-forest/40 to-transparent" />
         </div>
         <div className="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-4 py-20">
           <Reveal className="max-w-2xl">
