@@ -7,7 +7,13 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { WhatsAppIcon } from "@/components/site/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { CATEGORIES, FEATURED_PRODUCTS, PRODUCTS } from "@/data/products";
-import { canonical, GENERAL_WHATSAPP_URL, MAPS_DIRECTIONS_URL, SITE } from "@/lib/site";
+import {
+  canonical,
+  GENERAL_WHATSAPP_URL,
+  MAPS_DIRECTIONS_URL,
+  SITE,
+  socialImageMeta,
+} from "@/lib/site";
 import hero from "@/assets/hero.jpg";
 import catBlends from "@/assets/cat-blends.jpg";
 import catPowders from "@/assets/cat-powders.jpg";
