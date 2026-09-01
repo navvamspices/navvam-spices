@@ -60,7 +60,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Many cooks add a masala like this once the onions and tomatoes have softened, then let the gravy simmer so the aroma settles into the dish. Adjust quantity to taste.",
     image: chickenMasala,
-    imageAlt: "Home-style chicken curry in a dark bowl beside a small bowl of red masala powder",
+    imageAlt: "Dark ceramic bowl of warm red-brown chicken masala powder with coriander seeds and dried red chillies",
     featured: true,
   },
   {
@@ -74,7 +74,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Often sprinkled in towards the end of cooking so the aroma stays bright. A small quantity is usually enough.",
     image: garamMasala,
-    imageAlt: "Bowl of dark garam masala powder surrounded by cinnamon, star anise and cardamom",
+    imageAlt: "Dark ceramic bowl of dark garam masala powder with cinnamon bark, star anise, cardamom and cloves",
     featured: true,
   },
   {
@@ -87,7 +87,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Suits longer, slower cooking. Add with the base masala and allow the gravy time to thicken.",
     image: meatMasala,
-    imageAlt: "Slow-cooked mutton curry with deep red gravy in a copper handi",
+    imageAlt: "Brass bowl of deep brown meat masala powder with peppercorns, cinnamon bark and bay leaf",
   },
   {
     slug: "fish-masala",
@@ -100,7 +100,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Frequently used in a marinade with a little salt and lemon before shallow frying, or stirred into a tangy curry base.",
     image: fishMasala,
-    imageAlt: "Spice-coated fish fry served on a banana leaf with lemon wedges",
+    imageAlt: "Dark stone bowl of bright red-orange fish masala powder with dried red chillies and mustard seeds",
   },
   {
     slug: "sambar-masala",
@@ -112,7 +112,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Usually stirred into cooked dal and vegetables with tamarind, then simmered before the final tempering.",
     image: sambarMasala,
-    imageAlt: "South Indian sambar in a brass bowl with curry leaves",
+    imageAlt: "Wooden bowl of brick-red sambar masala powder with coriander seeds, dried chillies and curry leaves",
   },
   {
     slug: "biryani-masala",
@@ -124,7 +124,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Commonly added to the marinade or the gravy layer before the rice is layered and finished on a low flame.",
     image: biryaniMasala,
-    imageAlt: "Layered biryani with saffron rice, fried onions and mint in a copper pot",
+    imageAlt: "Pale ceramic bowl of light-brown biryani masala powder with cardamom pods, star anise and cinnamon quills",
   },
   {
     slug: "chaat-masala",
@@ -136,7 +136,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Sprinkle over chaat, fruit, salads or fried snacks just before serving for a tangy finish.",
     image: chaatMasala,
-    imageAlt: "Bowl of chaat masala seasoning beside sliced fresh fruit",
+    imageAlt: "Ceramic bowl of pale grey-beige chaat masala powder with cumin seeds and dried spice pieces",
   },
   {
     slug: "king-kitchen-chicken-masala",
@@ -149,7 +149,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Suited to fuller-bodied gravies. Add to the masala base and finish with cream, curd or onion paste as your recipe suggests.",
     image: kingKitchen,
-    imageAlt: "Restaurant-style chicken curry in a cast iron pan garnished with coriander",
+    imageAlt: "Dark stone bowl of deep red-brown King Kitchen chicken masala powder with star anise and whole spices",
   },
   {
     slug: "rasam-powder",
@@ -161,7 +161,7 @@ export const PRODUCTS: Product[] = [
     howToUse:
       "Typically added to tamarind and tomato broth, then warmed gently — many cooks avoid a hard boil to keep the aroma.",
     image: rasamPowder,
-    imageAlt: "South Indian rasam in a small brass bowl with curry leaves and peppercorns",
+    imageAlt: "Small brass bowl of reddish-brown rasam powder with black peppercorns, dried chilli and curry leaf",
   },
   {
     slug: "turmeric-powder",
