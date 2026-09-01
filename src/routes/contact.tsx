@@ -155,10 +155,10 @@ function ContactPage() {
 
             <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
               <h2 className="text-xl text-forest">Visit or write to us</h2>
-              <p className="mt-3 flex gap-2 text-sm leading-relaxed text-muted-foreground">
+              <div className="mt-3 flex gap-2 text-sm leading-relaxed text-muted-foreground">
                 <MapPin aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-gold-deep" />
                 <address className="not-italic">{SITE.address.full}</address>
-              </p>
+              </div>
               <a
                 href={MAPS_DIRECTIONS_URL}
                 target="_blank"
