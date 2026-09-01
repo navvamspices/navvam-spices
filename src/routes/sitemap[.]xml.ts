@@ -3,7 +3,7 @@ import { PRODUCTS } from "@/data/products";
 
 const STATIC_PATHS = ["/", "/products", "/about", "/quality", "/contact", "/privacy", "/terms"];
 
-export const Route = createFileRoute("/sitemap[.]xml")({
+export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: ({ request }) => {
