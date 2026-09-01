@@ -55,7 +55,7 @@ export function Header() {
               width={1322}
               height={599}
               className={cn(
-                "h-auto mix-blend-multiply transition-all duration-300",
+                "h-auto mix-blend-multiply brightness-[0.97] contrast-[1.05] transition-all duration-300",
                 scrolled ? "w-[120px] sm:w-[152px]" : "w-[132px] sm:w-[164px]",
               )}
             />
@@ -69,7 +69,7 @@ export function Header() {
                 activeOptions={{ exact: item.to === "/" }}
                 activeProps={{ className: "text-forest after:w-full" }}
                 inactiveProps={{ className: "text-ink/70" }}
-                className="relative rounded-md px-3 py-2 text-sm font-medium transition-colors after:absolute after:bottom-1 after:left-3 after:h-px after:w-0 after:bg-gold after:transition-all after:duration-300 hover:text-forest hover:after:w-[calc(100%-1.5rem)]"
+                className="relative rounded-md px-3 py-2 text-sm font-medium transition-colors after:absolute after:bottom-1 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:rounded-full after:bg-gold after:transition-all after:duration-300 hover:text-forest hover:after:w-4/5"
               >
                 {item.label}
               </Link>
