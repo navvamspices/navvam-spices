@@ -8,7 +8,7 @@ import { canonical } from "@/lib/site";
 
 const TITLE = "Quality & Packaging | NAVVAM Spices & Masalas";
 const DESCRIPTION =
-  "How NAVVAM approaches consistent flavour, careful packaging and kitchen relevance across its spice powders and masala blends.";
+  "How NAVVAM approaches familiar flavour, careful packaging and kitchen relevance across its spice powders and masala blends.";
 
 const PRINCIPLES = [
   {

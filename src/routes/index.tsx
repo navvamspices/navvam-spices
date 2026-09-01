@@ -199,8 +199,8 @@ function Home() {
             </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               NAVVAM manufactures spice powders and masala blends from Imampur Village, near Medak
-              City. Our range is designed around the dishes families cook most often — and we
-              publish only what we can confirm about it.
+              City. The range includes blends for familiar South Indian and wider Indian
+              dishes, and we publish only what we can confirm about it.
             </p>
             <Button asChild variant="outline" className="mt-7">
               <Link to="/about">Read our story</Link>
