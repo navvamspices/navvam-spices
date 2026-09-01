@@ -59,3 +59,16 @@ export function enquiryWhatsappUrl(input: {
 export function canonical(path: string) {
   return SITE.origin ? `${SITE.origin}${path}` : path;
 }
+
+/**
+ * Social preview images require an absolute URL. Set SITE.origin once a public
+ * domain is configured; until then we omit og:image rather than emit a false URL.
+ */
+export function socialImageMeta(path: string) {
+  if (!SITE.origin) return [];
+  const url = `${SITE.origin}${path}`;
+  return [
+    { property: "og:image", content: url },
+    { name: "twitter:image", content: url },
+  ];
+}

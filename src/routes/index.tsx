@@ -7,7 +7,13 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { WhatsAppIcon } from "@/components/site/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { CATEGORIES, FEATURED_PRODUCTS, PRODUCTS } from "@/data/products";
-import { canonical, GENERAL_WHATSAPP_URL, MAPS_DIRECTIONS_URL, SITE } from "@/lib/site";
+import {
+  canonical,
+  GENERAL_WHATSAPP_URL,
+  MAPS_DIRECTIONS_URL,
+  SITE,
+  socialImageMeta,
+} from "@/lib/site";
 import hero from "@/assets/hero.jpg";
 import catBlends from "@/assets/cat-blends.jpg";
 import catPowders from "@/assets/cat-powders.jpg";
@@ -25,6 +31,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { property: "og:url", content: canonical("/") },
+      ...socialImageMeta(hero),
     ],
     links: [{ rel: "canonical", href: canonical("/") }],
   }),
@@ -41,18 +48,18 @@ const TRUST = [
 const PROCESS = [
   {
     step: "01",
-    title: "Select",
-    body: "We choose the spices and blends that Indian kitchens use most, from daily powders to dish-specific masalas.",
+    title: "Explore",
+    body: `Browse ${PRODUCTS.length} masala blends and single-spice powders in the NAVVAM range.`,
   },
   {
     step: "02",
-    title: "Blend",
-    body: "Each masala is prepared to a consistent recipe so the same measure gives you the same flavour next time.",
+    title: "Choose",
+    body: "Select the product that matches the dish or cooking need you have in mind.",
   },
   {
     step: "03",
-    title: "Pack",
-    body: "Products are packed in convenient formats for home kitchens and retail counters. Pack sizes confirmed on enquiry.",
+    title: "Enquire",
+    body: "Contact NAVVAM for current pack sizes, pricing and ordering details.",
   },
 ];
 
@@ -69,8 +76,7 @@ function Home() {
             height={1080}
             className="size-full object-cover"
           />
-          <div className="absolute inset-0 bg-forest/85" />
-          <div className="absolute inset-0 bg-linear-to-r from-forest/80 via-forest/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-forest/95 from-10% via-forest/80 via-45% to-forest/70 sm:to-forest/15" />
         </div>
         <div className="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-4 py-20">
           <Reveal className="max-w-2xl">
@@ -199,8 +205,8 @@ function Home() {
             </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               NAVVAM manufactures spice powders and masala blends from Imampur Village, near Medak
-              City. Our range is designed around the dishes families cook most often — and we
-              publish only what we can confirm about it.
+              City. The range includes blends for familiar South Indian and wider Indian
+              dishes, and we publish only what we can confirm about it.
             </p>
             <Button asChild variant="outline" className="mt-7">
               <Link to="/about">Read our story</Link>
@@ -213,9 +219,9 @@ function Home() {
       <section className="bg-gradient-warm px-4 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            eyebrow="How we work"
-            title="Select. Blend. Pack."
-            description="A simple, repeatable approach behind every NAVVAM product."
+            eyebrow="How to order"
+            title="Finding the right flavour is simple."
+            description="Explore the range, choose what suits your cooking, and enquire for pack sizes and pricing."
           />
           <ol className="mt-10 grid gap-6 md:grid-cols-3">
             {PROCESS.map((s, i) => (
