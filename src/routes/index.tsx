@@ -76,7 +76,7 @@ function Home() {
             height={1080}
             className="size-full object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-r from-forest/95 from-10% via-forest/80 via-45% to-forest/35" />
+          <div className="absolute inset-0 bg-linear-to-r from-forest/95 from-10% via-forest/80 via-45% to-forest/70 sm:to-forest/35" />
         </div>
         <div className="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-4 py-20">
           <Reveal className="max-w-2xl">
@@ -219,9 +219,9 @@ function Home() {
       <section className="bg-gradient-warm px-4 py-16 sm:py-20">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            eyebrow="How we work"
-            title="Select. Blend. Pack."
-            description="A simple, repeatable approach behind every NAVVAM product."
+            eyebrow="How to order"
+            title="Finding the right flavour is simple."
+            description="Explore the range, choose what suits your cooking, and enquire for pack sizes and pricing."
           />
           <ol className="mt-10 grid gap-6 md:grid-cols-3">
             {PROCESS.map((s, i) => (
