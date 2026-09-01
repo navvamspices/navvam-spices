@@ -31,6 +31,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
       { property: "og:url", content: canonical("/") },
+      ...socialImageMeta(hero),
     ],
     links: [{ rel: "canonical", href: canonical("/") }],
   }),
@@ -47,18 +48,18 @@ const TRUST = [
 const PROCESS = [
   {
     step: "01",
-    title: "Select",
-    body: "We choose the spices and blends that Indian kitchens use most, from daily powders to dish-specific masalas.",
+    title: "Explore",
+    body: `Browse ${PRODUCTS.length} masala blends and single-spice powders in the NAVVAM range.`,
   },
   {
     step: "02",
-    title: "Blend",
-    body: "Each masala is prepared to a consistent recipe so the same measure gives you the same flavour next time.",
+    title: "Choose",
+    body: "Select the product that matches the dish or cooking need you have in mind.",
   },
   {
     step: "03",
-    title: "Pack",
-    body: "Products are packed in convenient formats for home kitchens and retail counters. Pack sizes confirmed on enquiry.",
+    title: "Enquire",
+    body: "Contact NAVVAM for current pack sizes, pricing and ordering details.",
   },
 ];
 
@@ -75,8 +76,7 @@ function Home() {
             height={1080}
             className="size-full object-cover"
           />
-          <div className="absolute inset-0 bg-forest/85" />
-          <div className="absolute inset-0 bg-linear-to-r from-forest/80 via-forest/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-forest/95 from-10% via-forest/80 via-45% to-forest/35" />
         </div>
         <div className="relative mx-auto flex min-h-[78vh] max-w-6xl flex-col justify-center px-4 py-20">
           <Reveal className="max-w-2xl">
