@@ -128,13 +128,13 @@ function ProductDetail() {
               </div>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="h-auto max-w-full whitespace-normal py-3 text-center">
                   <a
                     href={productWhatsappUrl(product.name)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <WhatsAppIcon />
+                    <WhatsAppIcon className="shrink-0" />
                     Enquire about {product.name}
                   </a>
                 </Button>
