@@ -111,7 +111,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             addressCountry: "IN",
           },
           hasMap: MAPS_DIRECTIONS_URL,
-          areaServed: "India",
         }),
       },
     ],

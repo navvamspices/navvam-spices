@@ -82,8 +82,7 @@ function AboutPage() {
               <Reveal delay={180}>
                 <dt className="font-display text-xl text-forest">Kitchen relevance</dt>
                 <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Blends are chosen around the dishes cooked most often across South Indian and
-                  wider Indian homes.
+                  The range includes blends for familiar South Indian and wider Indian dishes.
                 </dd>
               </Reveal>
               <Reveal delay={240}>

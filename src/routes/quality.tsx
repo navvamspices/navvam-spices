@@ -13,8 +13,8 @@ const DESCRIPTION =
 const PRINCIPLES = [
   {
     icon: Sparkles,
-    title: "Consistent flavour",
-    body: "Our focus is a range where each blend tastes recognisable from one pack to the next, so cooks can rely on the same measure each time.",
+    title: "Familiar flavour",
+    body: "Our focus is a range built around familiar Indian flavours, with product details confirmed directly with us before ordering.",
   },
   {
     icon: Boxes,
@@ -54,8 +54,8 @@ function QualityPage() {
             Care in every pack
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            NAVVAM is an early-stage brand building a spice and masala range across convenient pack
-            formats. The principles below describe what we are working towards.
+            NAVVAM is building a spice and masala range across convenient pack formats. The
+            principles below describe what we are working towards.
           </p>
         </div>
       </section>

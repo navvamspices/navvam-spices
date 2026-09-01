@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/navvam-logo.asset.json";
+import logo from "@/assets/navvam-logo-cropped.jpg";
 import { Button } from "@/components/ui/button";
 import { GENERAL_WHATSAPP_URL, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -50,13 +50,13 @@ export function Header() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4">
           <Link to="/" className="flex items-center gap-3" aria-label={`${SITE.name} — home`}>
             <img
-              src={logo.url}
+              src={logo}
               alt={`${SITE.name} logo`}
-              width={160}
-              height={98}
+              width={1322}
+              height={599}
               className={cn(
-                "w-[124px] mix-blend-multiply transition-all duration-300 sm:w-[150px]",
-                scrolled && "w-[106px] sm:w-[124px]",
+                "h-auto mix-blend-multiply transition-all duration-300",
+                scrolled ? "w-[120px] sm:w-[152px]" : "w-[132px] sm:w-[164px]",
               )}
             />
           </Link>
@@ -91,8 +91,11 @@ export function Header() {
               aria-label={open ? "Close menu" : "Open menu"}
               className="inline-flex size-11 items-center justify-center rounded-full border border-primary/20 text-forest lg:hidden"
             >
-              {open ? <Menu aria-hidden="true" className="hidden" /> : null}
-              {open ? <X aria-hidden="true" className="size-5" /> : <Menu aria-hidden="true" className="size-5" />}
+              {open ? (
+                <X aria-hidden="true" className="size-5" />
+              ) : (
+                <Menu aria-hidden="true" className="size-5" />
+              )}
             </button>
           </div>
         </div>
