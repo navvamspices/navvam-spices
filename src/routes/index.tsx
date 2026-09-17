@@ -38,6 +38,25 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
+const PILLARS = [
+  {
+    title: "Single-Origin Roots",
+    body: "Hand-picked from Salem, Guntur, and Malabar estates at peak harvest potency.",
+  },
+  {
+    title: "Slow Cold-Grinding",
+    body: "Milled at controlled low heat to safeguard precious volatile natural spice oils.",
+  },
+  {
+    title: "6 Tailored Pack Sizes",
+    body: "Available in 40g, 50g, 100g, 200g, 500g, and 1kg wholesale & retail packs.",
+  },
+  {
+    title: "Zero Adulteration",
+    body: "No starch, zero artificial food colours, and no exhausted spent residue.",
+  },
+];
+
 const TRUST = [
   { icon: Leaf, label: `${PRODUCTS.length} products in the range` },
   { icon: Package, label: "Pack sizes: 40g · 50g · 100g · 200g · 500g · 1kg" },
@@ -114,6 +133,18 @@ function Home() {
             <li key={t.label} className="flex items-center gap-3 text-sm text-ink/85">
               <t.icon aria-hidden="true" className="size-5 shrink-0 text-gold-deep" />
               {t.label}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Purity Pillars */}
+      <section className="border-b border-border bg-sand px-4 py-12">
+        <ul className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {PILLARS.map((p) => (
+            <li key={p.title} className="border-l-2 border-gold pl-5">
+              <h3 className="font-display text-lg text-forest">{p.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
             </li>
           ))}
         </ul>
