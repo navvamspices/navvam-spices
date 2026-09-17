@@ -120,10 +120,22 @@ function ProductDetail() {
                 </ul>
               </div>
 
-              <div className="mt-6 rounded-2xl border border-border bg-card p-5">
-                <p className="text-sm font-semibold text-forest">Pack sizes available on enquiry</p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Share your requirement and we will confirm the pack formats currently available.
+              <div className="mt-6">
+                <h2 className="text-sm font-semibold uppercase tracking-widest text-ink/70">
+                  Pack sizes
+                </h2>
+                <ul className="mt-3 flex flex-wrap gap-2">
+                  {["40g", "50g", "100g", "200g", "500g", "1kg"].map((s) => (
+                    <li
+                      key={s}
+                      className="rounded-full border border-border bg-cream px-3.5 py-1.5 text-sm font-medium text-forest"
+                    >
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Contact NAVVAM for current pricing on each size.
                 </p>
               </div>
 

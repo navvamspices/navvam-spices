@@ -156,11 +156,11 @@ function ProductsPage() {
           )}
 
           <p className="mt-8 text-sm text-muted-foreground">
-            Pack sizes available on enquiry.{" "}
+            Available in 40g, 50g, 100g, 200g, 500g and 1kg packs.{" "}
             <Link to="/contact" className="text-forest underline underline-offset-4">
               Contact NAVVAM
             </Link>{" "}
-            for current details.
+            for current pricing.
           </p>
         </div>
       </section>
