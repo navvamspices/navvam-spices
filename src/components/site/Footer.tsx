@@ -92,6 +92,15 @@ export function Footer() {
                 Enquire on WhatsApp
               </a>
             </li>
+            <li className="flex items-start gap-2 text-cream/80">
+              <span className="mt-0.5 size-4 shrink-0 text-gold">@</span>
+              <a
+                href="mailto:trade@navvamspices.com"
+                className="hover:text-cream hover:underline"
+              >
+                trade@navvamspices.com
+              </a>
+            </li>
             <li className="flex items-start gap-2">
               <MapPin aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-gold" />
               <span>
@@ -119,6 +128,9 @@ export function Footer() {
           details available on enquiry.
         </p>
         <p className="text-cream/60">
+          Zero adulteration · Cold-ground · Sourced from Guntur, Salem &amp; Malabar
+        </p>
+        <p className="text-cream/40 text-xs">
           Detailed ingredient, allergen, nutrition, certification, and licence information will be
           published after final verification.
         </p>

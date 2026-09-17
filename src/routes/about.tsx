@@ -69,27 +69,29 @@ function AboutPage() {
               <Reveal delay={60}>
                 <dt className="font-display text-xl text-forest">The range</dt>
                 <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {PRODUCTS.length} products today — nine masala blends and four single-spice
-                  powders, with pack formats confirmed on enquiry.
+                  {PRODUCTS.length} products — nine masala blends and four single-spice powders,
+                  available in 40g, 50g, 100g, 200g, 500g and 1kg pack formats.
                 </dd>
               </Reveal>
               <Reveal delay={120}>
                 <dt className="font-display text-xl text-forest">Telangana roots</dt>
                 <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  We manufacture from Imampur Village on Toopran Road, near Medak City, Telangana.
+                  We manufacture from Imampur Village on Toopran Road, near Medak City, Telangana
+                  502334.
                 </dd>
               </Reveal>
               <Reveal delay={180}>
-                <dt className="font-display text-xl text-forest">Kitchen relevance</dt>
+                <dt className="font-display text-xl text-forest">Known sourcing origins</dt>
                 <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  The range includes blends for familiar South Indian and wider Indian dishes.
+                  Chillies from Guntur, turmeric from Salem, coriander and black pepper from Malabar
+                  — sourced at peak harvest for full aroma and colour.
                 </dd>
               </Reveal>
               <Reveal delay={240}>
-                <dt className="font-display text-xl text-forest">Honest information</dt>
+                <dt className="font-display text-xl text-forest">No adulteration</dt>
                 <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  We publish only what we can confirm. Detailed product information follows final
-                  verification.
+                  No starch, no artificial food colours, no exhausted spent residue. Ground at
+                  controlled low heat to preserve natural volatile oils.
                 </dd>
               </Reveal>
             </dl>

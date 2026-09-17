@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NAVVAM Spices & Masalas | Essence of Purity</title>
+
+  <!-- Google Fonts: Rozha One & Marcellus (Heritage Serifs) + Outfit (Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       LIGHT HERITAGE LUXURY THEME (STRICTLY NO BLACK)
+       ========================================================================== */
+    :root {
+      --bg-cream: #FAF7F0;
+      --bg-surface: #FFFFFF;
+      --bg-sand: #F3ECE1;
+      --bg-parchment: #F8F3EA;
+      
+      --saffron-gold: #C68224;
+      --saffron-bright: #DF9529;
+      --saffron-soft: rgba(198, 130, 36, 0.12);
+      --terracotta: #A53C27;
+      --terracotta-soft: rgba(165, 60, 39, 0.1);
+      --cardamom-green: #3A5A40;
+      
+      /* Rich Roasted Espresso & Earth Umber for Typography (No Pure Black) */
+      --text-espresso: #251B16;
+      --text-umber: #473932;
+      --text-muted: #786960;
+      
+      --border-brass: rgba(198, 130, 36, 0.28);
+      --border-light: rgba(120, 105, 96, 0.14);
+      --shadow-warm: 0 16px 36px rgba(71, 57, 50, 0.07);
+      --shadow-hover: 0 22px 48px rgba(165, 60, 39, 0.12);
+      
+      --font-display: 'Rozha One', 'Marcellus', serif;
+      --font-serif: 'Marcellus', serif;
+      --font-sans: 'Outfit', sans-serif;
+      --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-espresso);
+      font-family: var(--font-sans);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* Custom Sandstone Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-sand); }
+    ::-webkit-scrollbar-thumb { background: #D6C7B2; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--saffron-gold); }
+
+    /* ==========================================================================
+       ROYAL MARIGOLD TOP TICKER
+       ========================================================================== */
+    .royal-ticker {
+      background: linear-gradient(90deg, #A53C27, #BD5338, #A53C27);
+      color: #FFFDF9;
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      text-align: center;
+      font-weight: 500;
+    }
+    .royal-ticker span {
+      background: #FAF7F0;
+      color: var(--terracotta);
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 700;
+      margin-left: 8px;
+    }
+
+    /* ==========================================================================
+       NAVIGATION
+       ========================================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 240, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-brass);
+      padding: 18px 5vw;
+    }
+
+    .navbar {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: var(--text-umber);
+      text-decoration: none;
+      font-size: 0.84rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--terracotta);
+    }
+
+    .brand-emblem {
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .brand-emblem h1 {
+      font-family: var(--font-display);
+      font-size: 2.3rem;
+      letter-spacing: 0.14em;
+      color: var(--terracotta);
+      line-height: 1;
+    }
+
+    .brand-emblem span {
+      font-family: var(--font-serif);
+      font-size: 0.68rem;
+      letter-spacing: 0.32em;
+      color: var(--saffron-gold);
+      text-transform: uppercase;
+      display: block;
+      margin-top: 3px;
+    }
+
+    .nav-actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-terracotta {
+      background: var(--terracotta);
+      color: #FAF7F0;
+      border: none;
+      padding: 10px 22px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(165, 60, 39, 0.25);
+    }
+
+    .btn-terracotta:hover {
+      background: #8E301D;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(165, 60, 39, 0.35);
+    }
+
+    /* ==========================================================================
+       HERO: ARCHED EDITORIAL PAVILION
+       ========================================================================== */
+    .hero-pavilion {
+      padding: 70px 6vw 90px 6vw;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+      position: relative;
+      background: radial-gradient(circle at 80% 30%, rgba(223, 149, 41, 0.12) 0%, transparent 60%);
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--saffron-soft);
+      border: 1px solid var(--border-brass);
+      color: var(--saffron-gold);
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 4.4vw, 4.4rem);
+      color: var(--text-espresso);
+      line-height: 1.16;
+      margin-bottom: 20px;
+    }
+
+    .hero-title em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--terracotta);
+    }
+
+    .hero-description {
+      font-size: 1.05rem;
+      color: var(--text-umber);
+      font-weight: 300;
+      margin-bottom: 34px;
+      max-width: 540px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-saffron {
+      background: var(--saffron-gold);
+      color: #FAF7F0;
+      padding: 14px 32px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 6px 18px rgba(198, 130, 36, 0.28);
+    }
+
+    .btn-saffron:hover {
+      background: var(--saffron-bright);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-umber {
+      background: transparent;
+      color: var(--text-espresso);
+      border: 1px solid var(--border-brass);
+      padding: 14px 28px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-outline-umber:hover {
+      background: var(--bg-surface);
+      border-color: var(--terracotta);
+      color: var(--terracotta);
+    }
+
+    /* Arched Picture Frame */
+    .arch-gallery {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .arch-frame {
+      width: 100%;
+      max-width: 440px;
+      height: 520px;
+      border-radius: 220px 220px 20px 20px;
+      overflow: hidden;
+      border: 6px solid var(--bg-surface);
+      box-shadow: 0 24px 50px rgba(71, 57, 50, 0.15);
+      position: relative;
+    }
+
+    .arch-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+
+    .arch-frame:hover img {
+      transform: scale(1.05);
+    }
+
+    .floating-quality-seal {
+      position: absolute;
+      bottom: -15px;
+      right: 20px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-brass);
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: var(--shadow-warm);
+      animation: gentleFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .floating-quality-seal strong {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--terracotta);
+    }
+
+    .floating-quality-seal span {
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       SECTION: PURITY PILLARS
+       ========================================================================== */
+    .pillars-strip {
+      background: var(--bg-sand);
+      border-top: 1px solid var(--border-brass);
+      border-bottom: 1px solid var(--border-brass);
+      padding: 50px 6vw;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .pillar-item {
+      text-align: left;
+      padding-left: 20px;
+      border-left: 2px solid var(--saffron-gold);
+    }
+
+    .pillar-item h4 {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--text-espresso);
+      margin-bottom: 6px;
+    }
+
+    .pillar-item p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       SECTION: FULL NAVVAM RANGE & INTERACTIVE QUANTITIES
+       ========================================================================== */
+    .catalog-section {
+      padding: 90px 6vw;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 50px auto;
+    }
+
+    .section-subtitle {
+      font-size: 0.74rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      color: var(--text-espresso);
+      margin-bottom: 12px;
+    }
+
+    /* Category Filter Tabs */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 45px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-brass);
+      color: var(--text-umber);
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--terracotta);
+      color: #FAF7F0;
+      border-color: var(--terracotta);
+      box-shadow: 0 4px 14px rgba(165, 60, 39, 0.2);
+    }
+
+    /* Product Cards Grid */
+    .products-mosaic {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .spice-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-warm);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .spice-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border-brass);
+    }
+
+    .card-photo-box {
+      width: 100%;
+      height: 220px;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 18px;
+      background: var(--bg-sand);
+      position: relative;
+    }
+
+    .card-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .spice-card:hover .card-photo-box img {
+      transform: scale(1.06);
+    }
+
+    .spice-type-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(250, 247, 240, 0.92);
+      color: var(--terracotta);
+      border: 1px solid var(--border-brass);
+      font-size: 0.64rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+
+    .spice-name {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--text-espresso);
+      margin-bottom: 6px;
+    }
+
+    .spice-aroma-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      min-height: 40px;
+    }
+
+    /* Interactive Quantity / Grammage Pills */
+    .quantity-selector-block {
+      margin-bottom: 20px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border-brass);
+    }
+
+    .quantity-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .quantity-pills {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .q-pill {
+      background: var(--bg-parchment);
+      border: 1px solid var(--border-light);
+      color: var(--text-umber);
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .q-pill:hover, .q-pill.active {
+      background: var(--saffron-gold);
+      color: #FAF7F0;
+      border-color: var(--saffron-gold);
+    }
+
+    .card-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .card-price-calc {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--text-espresso);
+    }
+
+    .card-price-calc small {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .btn-card-add {
+      background: var(--bg-sand);
+      border: 1px solid var(--border-brass);
+      color: var(--text-espresso);
+      font-size: 0.74rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 8px 16px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-card-add:hover {
+      background: var(--terracotta);
+      color: #FAF7F0;
+      border-color: var(--terracotta);
+    }
+
+    /* ==========================================================================
+       PLAYFUL & WITTY: "THE LIVE TADKA (TEMPERING) CRACKLE"
+       ========================================================================== */
+    .tadka-interactive-section {
+      background: var(--bg-parchment);
+      border-top: 1px solid var(--border-brass);
+      border-bottom: 1px solid var(--border-brass);
+      padding: 80px 6vw;
+      text-align: center;
+    }
+
+    .tadka-box {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--bg-surface);
+      border: 2px dashed var(--border-brass);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: var(--shadow-warm);
+      position: relative;
+    }
+
+    .tadka-pan {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 16px auto;
+      background: #E8DFD1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      box-shadow: 0 8px 18px rgba(71, 57, 50, 0.1);
+    }
+
+    .tadka-pan:active {
+      transform: scale(0.88) rotate(15deg);
+    }
+
+    .tadka-status {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--terracotta);
+      margin-top: 14px;
+      min-height: 28px;
+    }
+
+    /* ==========================================================================
+       B2B DISTRICT DISTRIBUTORSHIP PAVILION
+       ========================================================================== */
+    .trade-pavilion {
+      padding: 90px 6vw;
+    }
+
+    .trade-card-royal {
+      background: linear-gradient(135deg, #FFFDF9 0%, #F5EDE1 100%);
+      border: 2px solid var(--border-brass);
+      border-radius: 12px;
+      padding: 60px 40px;
+      text-align: center;
+      max-width: 920px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-warm);
+    }
+
+    .trade-emblem-badge {
+      display: inline-block;
+      background: var(--terracotta);
+      color: #FAF7F0;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .trade-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      color: var(--text-espresso);
+      margin-bottom: 16px;
+    }
+
+    .trade-desc {
+      color: var(--text-umber);
+      font-size: 0.98rem;
+      max-width: 660px;
+      margin: 0 auto 34px auto;
+      font-weight: 300;
+    }
+
+    .perks-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .perk-pill {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-brass);
+      padding: 8px 18px;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-espresso);
+      font-weight: 500;
+      border-radius: 4px;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    footer {
+      background: #ECE4D6;
+      border-top: 1px solid var(--border-brass);
+      padding: 80px 6vw 40px 6vw;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.12em;
+      color: var(--terracotta);
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.7;
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-serif);
+      font-size: 0.92rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-espresso);
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-umber);
+      text-decoration: none;
+      font-size: 0.84rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--terracotta);
+      padding-left: 4px;
+    }
+
+    .contact-line {
+      font-size: 0.86rem;
+      color: var(--text-umber);
+      margin-bottom: 10px;
+    }
+
+    .contact-line strong {
+      color: var(--text-espresso);
+    }
+
+    .footer-bottom {
+      padding-top: 30px;
+      border-top: 1px solid rgba(120, 105, 96, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       DISTRIBUTOR LEAD MODAL
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(37, 27, 22, 0.55);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .modal-backdrop.active { display: flex; }
+
+    .modal-card {
+      background: var(--bg-surface);
+      border: 2px solid var(--border-brass);
+      border-radius: 8px;
+      width: 100%;
+      max-width: 520px;
+      padding: 40px;
+      position: relative;
+      box-shadow: 0 30px 60px rgba(71, 57, 50, 0.25);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      font-size: 1.6rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-umber);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .form-input {
+      width: 100%;
+      background: var(--bg-parchment);
+      border: 1px solid var(--border-brass);
+      padding: 12px;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      color: var(--text-espresso);
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: var(--terracotta);
+      background: #FFFFFF;
+    }
+
+    /* Toast Notification */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--text-espresso);
+      color: #FAF7F0;
+      padding: 14px 24px;
+      border-radius: 4px;
+      font-size: 0.84rem;
+      border-left: 4px solid var(--saffron-gold);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      z-index: 9999;
+      transform: translateY(120px);
+      transition: transform 0.4s ease;
+    }
+    #toast.show { transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-pavilion { grid-template-columns: 1fr; text-align: center; }
+      .hero-cta-group { justify-content: center; }
+      .hero-description { margin-left: auto; margin-right: auto; }
+      .pillars-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .navbar { grid-template-columns: 1fr auto; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .pillars-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Royal Marigold Ticker -->
+  <aside class="royal-ticker">
+    Appointing District Distributors Across Every District 
+    <span>Call +91 9133644949</span>
+  </aside>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="#catalog">All Creations</a>
+        <a href="#tadka">The Tadka Room</a>
+        <a href="#trade">Dealership</a>
+      </div>
+
+      <a href="#" class="brand-emblem">
+        <h1>NAVVAM</h1>
+        <span>Spices &amp; Masalas</span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="btn-terracotta" onclick="toggleModal(true)">Trade Enquiry</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Pavilion -->
+    <section class="hero-pavilion">
+      <div>
+        <div class="hero-tag">
+          &#10022; 100% Sun-Dried &bull; Cold Stone-Milled &bull; Unadulterated
+        </div>
+        <h2 class="hero-title">
+          Pure Culinary Gold, Sourced from <em>Sacred Soil</em>.
+        </h2>
+        <p class="hero-description">
+          We bring you uncompromised kitchen purity. No spent spices, zero synthetic coloring, and strictly no artificial fillers—just rich volatile aroma and unmatched botanical flavor.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#catalog" class="btn-saffron" style="text-decoration:none;">Explore All 13 Products</a>
+          <button class="btn-outline-umber" onclick="toggleModal(true)">District Dealership</button>
+        </div>
+      </div>
+
+      <div class="arch-gallery">
+        <div class="arch-frame">
+          <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80" alt="Whole Fragrant Spices" />
+        </div>
+        <div class="floating-quality-seal">
+          <strong>100%</strong>
+          <span>Vegetarian</span>
+          <span>Zero Fillers</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Purity Pillars -->
+    <section class="pillars-strip">
+      <div class="pillars-grid">
+        <div class="pillar-item">
+          <h4>Single-Origin Roots</h4>
+          <p>Hand-picked from Salem, Guntur, and Malabar estates at peak harvest potency.</p>
+        </div>
+        <div class="pillar-item">
+          <h4>Slow Cold-Grinding</h4>
+          <p>Milled at controlled low heat to safeguard precious volatile natural spice oils.</p>
+        </div>
+        <div class="pillar-item">
+          <h4>6 Tailored Pack Sizes</h4>
+          <p>Available in 40g, 50g, 100g, 200g, 500g, and 1kg wholesale &amp; retail packs.</p>
+        </div>
+        <div class="pillar-item">
+          <h4>Zero Adulteration</h4>
+          <p>No starch, zero artificial food colors, and no exhausted spent residue.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog Section with 13 NAVVAM Products & Interactive Quantities -->
+    <section class="catalog-section" id="catalog">
+      <div class="section-head">
+        <p class="section-subtitle">Crafted In Precision Batches</p>
+        <h3 class="section-title">The Complete NAVVAM Portfolio</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          Select your preferred pack quantity to inspect live weight-based pricing.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterCatalog('all', this)">All 13 Products</button>
+        <button class="filter-btn" onclick="filterCatalog('pure', this)">Pure Estate Powders</button>
+        <button class="filter-btn" onclick="filterCatalog('masala', this)">Signature Masala Blends</button>
+      </div>
+
+      <!-- 13 Products Grid -->
+      <div class="products-mosaic" id="productsGrid">
+
+        <!-- 1. Turmeric Powder -->
+        <article class="spice-card" data-category="pure" data-baseprice="160" data-baseqty="200">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Pure Estate Powder</span>
+            <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=700&q=80" alt="Salem Turmeric Powder" />
+          </div>
+          <h4 class="spice-name">Salem Turmeric Powder</h4>
+          <p class="spice-aroma-note">High Curcumin (5%+) rhizomes giving brilliant golden color and rich wellness benefits.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">200g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹160 <small>/ 200g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Salem Turmeric Powder')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 2. Red Chilli Powder -->
+        <article class="spice-card" data-category="pure" data-baseprice="180" data-baseqty="200">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Pure Estate Powder</span>
+            <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=700&q=80" alt="Guntur Teja Chilli" />
+          </div>
+          <h4 class="spice-name">Guntur Teja Red Chilli</h4>
+          <p class="spice-aroma-note">Fiery, pungent sun-cured chillies ground without added color for authentic warmth.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">200g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹180 <small>/ 200g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Guntur Teja Red Chilli')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 3. Dhaniya Powder -->
+        <article class="spice-card" data-category="pure" data-baseprice="140" data-baseqty="200">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Pure Estate Powder</span>
+            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=700&q=80" alt="Royal Dhaniya Coriander Powder" />
+          </div>
+          <h4 class="spice-name">Royal Dhaniya Powder</h4>
+          <p class="spice-aroma-note">Cold-milled green coriander seeds that impart sweet citrus aroma and luscious curry body.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">200g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹140 <small>/ 200g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Royal Dhaniya Powder')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 4. Black Pepper Powder -->
+        <article class="spice-card" data-category="pure" data-baseprice="260" data-baseqty="100">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Pure Estate Powder</span>
+            <img src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=700&q=80" alt="Tellicherry Black Pepper" />
+          </div>
+          <h4 class="spice-name">Black Pepper Powder</h4>
+          <p class="spice-aroma-note">Bold Malabar peppercorns bursting with essential piperine oils and sharp woody heat.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">100g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹260 <small>/ 100g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Black Pepper Powder')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 5. Biryani Masala -->
+        <article class="spice-card" data-category="masala" data-baseprice="250" data-baseqty="100">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Heritage Blend</span>
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80" alt="Biryani Masala" />
+          </div>
+          <h4 class="spice-name">Royal Biryani Masala</h4>
+          <p class="spice-aroma-note">Star anise, shahi jeera, mace, and green cardamom for authentic regal dum preparation.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">100g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹250 <small>/ 100g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Royal Biryani Masala')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 6. Chicken Masala -->
+        <article class="spice-card" data-category="masala" data-baseprice="220" data-baseqty="100">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Heritage Blend</span>
+            <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=700&q=80" alt="Chicken Masala" />
+          </div>
+          <h4 class="spice-name">Chicken Masala</h4>
+          <p class="spice-aroma-note">Robust country blend crafted to coat poultry juices with rich red gravy and aroma.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">100g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹220 <small>/ 100g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Chicken Masala')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 7. Garam Masala -->
+        <article class="spice-card" data-category="masala" data-baseprice="240" data-baseqty="100">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Heritage Blend</span>
+            <img src="https://images.unsplash.com/photo-1596040033282-37eb872a0c64?auto=format&fit=crop&w=700&q=80" alt="Royal Garam Masala" />
+          </div>
+          <h4 class="spice-name">Royal Garam Masala</h4>
+          <p class="spice-aroma-note">Finely proportioned cinnamon, cloves, nutmeg, and stone flower for crowning finished curries.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">100g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹240 <small>/ 100g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Royal Garam Masala')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 8. King Kitchen Chicken Masala -->
+        <article class="spice-card" data-category="masala" data-baseprice="260" data-baseqty="100">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Master Reserve Blend</span>
+            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=700&q=80" alt="King Kitchen Chicken Masala" />
+          </div>
+          <h4 class="spice-name">King Kitchen Chicken Masala</h4>
+          <p class="spice-aroma-note">Our crown formulation featuring double-roasted whole aromatics for restaurant-grade dishes.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">100g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹260 <small>/ 100g</small></div>
+            <button class="btn-card-add" onclick="orderItem('King Kitchen Chicken Masala')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 9. Meat Masala -->
+        <article class="spice-card" data-category="masala" data-baseprice="230" data-baseqty="100">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Heritage Blend</span>
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" alt="Meat Masala" />
+          </div>
+          <h4 class="spice-name">Royal Meat Masala</h4>
+          <p class="spice-aroma-note">Deep, warm cloves and black cardamom designed to tenderize and infuse slow-cooked meats.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">100g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹230 <small>/ 100g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Royal Meat Masala')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 10. Fish Masala -->
+        <article class="spice-card" data-category="masala" data-baseprice="210" data-baseqty="100">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Coastal Blend</span>
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=700&q=80" alt="Fish Masala" />
+          </div>
+          <h4 class="spice-name">Coastal Fish Masala</h4>
+          <p class="spice-aroma-note">Infused with mustard, dry ginger, and fenugreek for crispy tawa fry and rich coastal curries.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">100g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹210 <small>/ 100g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Coastal Fish Masala')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 11. Sambar Masala -->
+        <article class="spice-card" data-category="masala" data-baseprice="170" data-baseqty="100">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">South Heritage</span>
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" alt="Sambar Masala" />
+          </div>
+          <h4 class="spice-name">Traditional Sambar Masala</h4>
+          <p class="spice-aroma-note">Roasted chana dal, coriander, cumin, and compounded asafoetida for authentic temple-style lentil stew.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">100g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹170 <small>/ 100g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Traditional Sambar Masala')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 12. Rasam Powder -->
+        <article class="spice-card" data-category="masala" data-baseprice="180" data-baseqty="100">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">South Heritage</span>
+            <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=700&q=80" alt="Rasam Powder" />
+          </div>
+          <h4 class="spice-name">Aromatic Rasam Powder</h4>
+          <p class="spice-aroma-note">Crushed black pepper, toor dal, and jeera crafted to warm the soul and aid soothing digestion.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">100g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹180 <small>/ 100g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Aromatic Rasam Powder')">Add to Order</button>
+          </div>
+        </article>
+
+        <!-- 13. Chaat Masala -->
+        <article class="spice-card" data-category="masala" data-baseprice="190" data-baseqty="100">
+          <div class="card-photo-box">
+            <span class="spice-type-tag">Street Gourmet</span>
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80" alt="Chaat Masala" />
+          </div>
+          <h4 class="spice-name">Tangy Chaat Masala</h4>
+          <p class="spice-aroma-note">Sun-dried amchur, black salt, and roasted cumin that makes fruits and street snacks sing.</p>
+          <div class="quantity-selector-block">
+            <div class="quantity-label">
+              <span>Select Quantity</span>
+              <strong class="active-weight-label">100g</strong>
+            </div>
+            <div class="quantity-pills">
+              <span class="q-pill" onclick="selectWeight(this, 40)">40g</span>
+              <span class="q-pill" onclick="selectWeight(this, 50)">50g</span>
+              <span class="q-pill active" onclick="selectWeight(this, 100)">100g</span>
+              <span class="q-pill" onclick="selectWeight(this, 200)">200g</span>
+              <span class="q-pill" onclick="selectWeight(this, 500)">500g</span>
+              <span class="q-pill" onclick="selectWeight(this, 1000)">1kg</span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <div class="card-price-calc">₹190 <small>/ 100g</small></div>
+            <button class="btn-card-add" onclick="orderItem('Tangy Chaat Masala')">Add to Order</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Playful Section: The Tadka / Tempering Simulator -->
+    <section class="tadka-interactive-section" id="tadka">
+      <div class="tadka-box">
+        <p class="section-subtitle">Interactive Culinary Room</p>
+        <h3 class="section-title" style="font-size: 2rem;">Tap the Pan to Splutter the Tadka</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">
+          Hear the ancient ritual of whole mustard and jeera hitting warm ghee.
+        </p>
+
+        <div class="tadka-pan" onclick="splutterTadka()">🍳</div>
+        <div class="tadka-status" id="tadkaMsg">Click the pan to temper NAVVAM spices...</div>
+      </div>
+    </section>
+
+    <!-- Trade & Distributorship Pavilion -->
+    <section class="trade-pavilion" id="trade">
+      <div class="trade-card-royal">
+        <span class="trade-emblem-badge">District Expansion &bull; Trade Desk</span>
+        <h3 class="trade-title">Become an Exclusive District Distributor</h3>
+        <p class="trade-desc">
+          We are partnering with established FMCG distributors and stockists in every district. Gain territory exclusivity, direct mill logistics, and healthy margins on all 13 fast-moving SKUs.
+        </p>
+        <div class="perks-row">
+          <span class="perk-pill">&#10003; 100% Territory Exclusivity</span>
+          <span class="perk-pill">&#10003; High Gross Margin Structure</span>
+          <span class="perk-pill">&#10003; 40g to 1kg Pack Flexibility</span>
+          <span class="perk-pill">&#10003; Direct Factory Support</span>
+        </div>
+        <button class="btn-terracotta" onclick="toggleModal(true)" style="padding: 16px 36px; font-size: 0.86rem;">
+          Apply for District Distributorship
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>NAVVAM</h3>
+        <p>Essence of Purity. Dedicated to the honest heritage of Indian spice farming, cold stone-milling, and uncompromised culinary vitality.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Core Spices</h4>
+        <ul class="footer-links">
+          <li><a href="#catalog">Salem Turmeric</a></li>
+          <li><a href="#catalog">Guntur Teja Chilli</a></li>
+          <li><a href="#catalog">Royal Dhaniya</a></li>
+          <li><a href="#catalog">Malabar Black Pepper</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Master Masalas</h4>
+        <ul class="footer-links">
+          <li><a href="#catalog">Royal Biryani Masala</a></li>
+          <li><a href="#catalog">King Kitchen Chicken</a></li>
+          <li><a href="#catalog">Traditional Sambar</a></li>
+          <li><a href="#catalog">Aromatic Rasam</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Direct Contact</h4>
+        <p class="contact-line"><strong>Phone / WhatsApp:</strong> +91 9133644949</p>
+        <p class="contact-line"><strong>Website:</strong> www.navvamspices.com</p>
+        <p class="contact-line"><strong>Trade Desk:</strong> trade@navvamspices.com</p>
+        <p class="contact-line"><strong>Headquarters:</strong> Telangana, India</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 NAVVAM SPICES AND MASALAS. All Rights Reserved.</div>
+      <div>Zero Fillers &bull; Cold-Ground &bull; Pure Quality Assured</div>
+    </div>
+  </footer>
+
+  <!-- District Dealership Modal -->
+  <div class="modal-backdrop" id="tradeModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="toggleModal(false)">&times;</button>
+      <h3 style="font-family: var(--font-display); font-size: 1.8rem; color: var(--text-espresso); margin-bottom: 6px;">
+        District Dealership Form
+      </h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px;">
+        Partner with NAVVAM. Submit your details below and our commercial division will connect with you.
+      </p>
+
+      <form onsubmit="handleTradeApplication(event)">
+        <div class="form-group">
+          <label>Full Name / Business Proprietor</label>
+          <input type="text" class="form-input" required placeholder="e.g. Anand Kumar" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" class="form-input" required placeholder="+91 9133644949" />
+        </div>
+        <div class="form-group">
+          <label>District &amp; State Applied For</label>
+          <input type="text" class="form-input" required placeholder="e.g. Warangal District, Telangana" />
+        </div>
+        <div class="form-group">
+          <label>Retail Coverage / Network Size</label>
+          <input type="text" class="form-input" placeholder="e.g. Supply to 200+ Provision Stores" />
+        </div>
+        <button type="submit" class="btn-terracotta" style="width: 100%; margin-top: 10px; padding: 14px;">
+          Submit Dealership Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <!-- JavaScript Interactions -->
+  <script>
+    // 1. Dynamic Quantity & Proportional Weight Calculation
+    function selectWeight(pillElement, grams) {
+      const card = pillElement.closest('.spice-card');
+      
+      // Toggle active styling
+      card.querySelectorAll('.q-pill').forEach(p => p.classList.remove('active'));
+      pillElement.classList.add('active');
+
+      // Update Weight Label
+      const weightLabel = card.querySelector('.active-weight-label');
+      weightLabel.innerText = grams >= 1000 ? (grams / 1000) + 'kg' : grams + 'g';
+
+      // Base Price & Base Weight Proportional math
+      const basePrice = parseFloat(card.getAttribute('data-baseprice'));
+      const baseQty = parseFloat(card.getAttribute('data-baseqty'));
+      
+      // Proportional calculation with slight economy scaling for bigger packs
+      let calculatedPrice = Math.round((basePrice / baseQty) * grams);
+      if (grams >= 500) calculatedPrice = Math.round(calculatedPrice * 0.94); // 6% bulk benefit
+      if (grams >= 1000) calculatedPrice = Math.round(calculatedPrice * 0.90); // 10% wholesale benefit
+
+      const priceDisplay = card.querySelector('.card-price-calc');
+      const unitText = grams >= 1000 ? (grams / 1000) + 'kg' : grams + 'g';
+      priceDisplay.innerHTML = `₹${calculatedPrice} <small>/ ${unitText}</small>`;
+    }
+
+    // 2. Category Filter (Pure Powders vs Blended Masalas)
+    function filterCatalog(category, button) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+
+      const cards = document.querySelectorAll('.spice-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 3. Playful Tadka Simulator Easter Egg
+    const tadkaSounds = [
+      "🔥 Sssss... Mustard seeds crackling vigorously in pure ghee!",
+      "🌿 Cumin & curry leaves aroma traveling across three houses!",
+      "✨ Splutter! Roasted hing released into the hot pan.",
+      "👑 That unmistakable aroma when mother starts cooking in the kitchen.",
+      "💛 The tadka is golden, aromatic, and 100% NAVVAM pure."
+    ];
+    let tadkaIndex = 0;
+
+    function splutterTadka() {
+      const pan = document.querySelector('.tadka-pan');
+      const msg = document.getElementById('tadkaMsg');
+      pan.style.transform = `scale(${0.9 + Math.random()*0.15}) rotate(${(Math.random() - 0.5) * 40}deg)`;
+      setTimeout(() => { pan.style.transform = 'none'; }, 200);
+
+      msg.innerText = tadkaSounds[tadkaIndex % tadkaSounds.length];
+      msg.style.color = '#A53C27';
+      tadkaIndex++;
+    }
+
+    // 4. Modal & Toast Handling
+    function toggleModal(open) {
+      const modal = document.getElementById('tradeModal');
+      modal.classList.toggle('active', open);
+      document.body.style.overflow = open ? 'hidden' : 'auto';
+    }
+
+    // Close modal if user clicks outside
+    document.getElementById('tradeModal').addEventListener('click', function(e) {
+      if (e.target === this) toggleModal(false);
+    });
+
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      toast.innerText = text;
+      toast.classList.add('show');
+      setTimeout(() => { toast.classList.remove('show'); }, 3500);
+    }
+
+    function orderItem(name) {
+      showToast(`Selected ${name} added to your enquiry cart!`);
+    }
+
+    function handleTradeApplication(e) {
+      e.preventDefault();
+      toggleModal(false);
+      showToast("Thank you! Your District Distributorship request is logged (+91 9133644949).");
+    }
+  </script>
+</body>
+</html>

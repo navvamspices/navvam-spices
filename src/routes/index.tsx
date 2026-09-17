@@ -40,7 +40,7 @@ export const Route = createFileRoute("/")({
 
 const TRUST = [
   { icon: Leaf, label: `${PRODUCTS.length} products in the range` },
-  { icon: Package, label: "Pack sizes available on enquiry" },
+  { icon: Package, label: "Pack sizes: 40g · 50g · 100g · 200g · 500g · 1kg" },
   { icon: MapPin, label: "Manufactured in Medak, Telangana" },
   { icon: Sparkles, label: "Blends built around everyday dishes" },
 ];
@@ -54,13 +54,20 @@ const PROCESS = [
   {
     step: "02",
     title: "Choose",
-    body: "Select the product that matches the dish or cooking need you have in mind.",
+    body: "Select the product and pack size — available in 40g, 50g, 100g, 200g, 500g and 1kg formats.",
   },
   {
     step: "03",
     title: "Enquire",
-    body: "Contact NAVVAM for current pack sizes, pricing and ordering details.",
+    body: "Call or WhatsApp NAVVAM on +91 91336 44949 for current pricing and ordering details.",
   },
+];
+
+const DISTRIBUTOR_PERKS = [
+  "Territory exclusivity per district",
+  "All 13 SKUs across 6 pack sizes",
+  "Direct factory support & logistics",
+  "Healthy margin structure",
 ];
 
 function Home() {
@@ -237,6 +244,46 @@ function Home() {
               </Reveal>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* Distributor / B2B section */}
+      <section className="border-y border-border bg-cream px-4 py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-soft sm:p-12">
+            <Reveal className="text-center">
+              <p className="eyebrow">District expansion · Trade desk</p>
+              <h2 className="mt-3 text-3xl text-forest sm:text-4xl">
+                Become an Exclusive District Distributor
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-muted-foreground">
+                NAVVAM is appointing established FMCG distributors and stockists across every
+                district in Telangana and beyond. Gain territory exclusivity, direct mill logistics,
+                and healthy margins on all 13 fast-moving SKUs across 6 pack sizes.
+              </p>
+              <ul className="mt-6 flex flex-wrap justify-center gap-3">
+                {DISTRIBUTOR_PERKS.map((perk) => (
+                  <li
+                    key={perk}
+                    className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-ink/80"
+                  >
+                    ✓ {perk}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 flex flex-wrap justify-center gap-3">
+                <Button asChild variant="gold" size="lg">
+                  <a href={GENERAL_WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                    <WhatsAppIcon />
+                    Apply on WhatsApp
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/contact">Contact the trade desk</Link>
+                </Button>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

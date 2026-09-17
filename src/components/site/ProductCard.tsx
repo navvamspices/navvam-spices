@@ -32,6 +32,16 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
           </Link>
         </h3>
         <p className="text-sm leading-relaxed text-muted-foreground">{product.short}</p>
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {["40g", "50g", "100g", "200g", "500g", "1kg"].map((s) => (
+            <span
+              key={s}
+              className="rounded-full border border-border bg-secondary px-2.5 py-0.5 text-xs text-muted-foreground"
+            >
+              {s}
+            </span>
+          ))}
+        </div>
         <div className="mt-auto flex items-center justify-between pt-4">
           <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-forest">
             View product

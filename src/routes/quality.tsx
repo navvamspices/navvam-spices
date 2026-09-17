@@ -13,22 +13,32 @@ const DESCRIPTION =
 const PRINCIPLES = [
   {
     icon: Sparkles,
-    title: "Familiar flavour",
-    body: "Our focus is a range built around familiar Indian flavours, with product details confirmed directly with us before ordering.",
+    title: "Sourced from known origins",
+    body: "Chillies from Guntur, turmeric from Salem, coriander and black pepper from Malabar estates — sourced at peak harvest for full aroma and colour.",
   },
   {
     icon: Boxes,
-    title: "Careful packaging",
-    body: "We are building the range across convenient pack formats — from small hanging pouches for trial and daily use to larger box packs for regular kitchens.",
+    title: "Six pack sizes",
+    body: "Available in 40g, 50g, 100g, 200g, 500g and 1kg formats — from small hanging pouches for daily use to larger packs for regular kitchens and bulk buyers.",
   },
   {
     icon: CookingPot,
     title: "Kitchen relevance",
-    body: "Every product is chosen because it earns a place in everyday cooking, not because it fills a shelf.",
+    body: "Every product is chosen because it earns a place in everyday cooking. Blends are named after the dishes they are made for.",
   },
 ];
 
+const PACK_SIZES = [
+  { size: "40g", use: "Trial & single-use" },
+  { size: "50g", use: "Daily home kitchen" },
+  { size: "100g", use: "Regular household" },
+  { size: "200g", use: "Frequent cooking" },
+  { size: "500g", use: "Large family / small trade" },
+  { size: "1kg", use: "Bulk & wholesale" },
+];
+
 export const Route = createFileRoute("/quality")({
+
   head: () => ({
     meta: [
       { title: TITLE },
@@ -87,6 +97,36 @@ function QualityPage() {
               Detailed ingredient, allergen, nutrition, certification, and licence information will
               be published after final verification. Until then, please contact us directly for the
               specifics you need before ordering.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Pack sizes */}
+      <section className="bg-cream px-4 py-16">
+        <div className="mx-auto max-w-6xl">
+          <SectionHeading
+            eyebrow="Packaging"
+            title="Six pack sizes for every need"
+            description="From a 40g trial pouch to a 1kg wholesale pack — all 13 products are available across the full size range."
+          />
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {PACK_SIZES.map((p, i) => (
+              <Reveal
+                key={p.size}
+                delay={i * 60}
+                className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft"
+              >
+                <span className="font-display text-2xl text-gold-deep">{p.size}</span>
+                <span className="text-sm text-muted-foreground">{p.use}</span>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal className="mt-8 flex gap-3 rounded-2xl border border-sand bg-cream p-6">
+            <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-gold-deep" />
+            <p className="text-sm leading-relaxed text-ink/85">
+              Detailed ingredient, allergen, nutrition, certification, and licence information will
+              be published after final verification. Contact us directly for specifics before ordering.
             </p>
           </Reveal>
         </div>
