@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { Phone } from "lucide-react";
+import { Phone, ShoppingCart } from "lucide-react";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { EnquiryCTA } from "@/components/site/EnquiryCTA";
 import { ProductCard } from "@/components/site/ProductCard";
@@ -7,7 +8,8 @@ import { Reveal } from "@/components/site/Reveal";
 import { WhatsAppIcon } from "@/components/site/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { categoryLabel, getProduct, relatedProducts } from "@/data/products";
-import { canonical, productWhatsappUrl, SITE } from "@/lib/site";
+import { canonical, SITE } from "@/lib/site";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/products/$slug")({
   loader: ({ params }) => {
@@ -66,9 +68,23 @@ export const Route = createFileRoute("/products/$slug")({
   component: ProductDetail,
 });
 
+const SIZES = ["40g", "50g", "100g", "200g", "500g", "1kg"];
+
+function cartWhatsappUrl(productName: string, sizes: string[]) {
+  const sizeText = sizes.length > 0 ? sizes.join(", ") : "100g";
+  const msg = `Hello NAVVAM, I would like to order ${productName} — ${sizeText} pack${sizes.length > 1 ? "s" : ""}. Please share pricing and ordering details.`;
+  return `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+}
+
 function ProductDetail() {
   const { product } = Route.useLoaderData();
   const related = relatedProducts(product);
+  const [selectedSizes, setSelectedSizes] = useState<string[]>(["100g"]);
+
+  const toggleSize = (s: string) =>
+    setSelectedSizes((prev) =>
+      prev.includes(s) ? prev.filter((x) => x !== s) : [...prev, s],
+    );
 
   return (
     <>
@@ -122,32 +138,43 @@ function ProductDetail() {
 
               <div className="mt-6">
                 <h2 className="text-sm font-semibold uppercase tracking-widest text-ink/70">
-                  Pack sizes
+                  Select pack size
                 </h2>
                 <ul className="mt-3 flex flex-wrap gap-2">
-                  {["40g", "50g", "100g", "200g", "500g", "1kg"].map((s) => (
-                    <li
-                      key={s}
-                      className="rounded-full border border-border bg-cream px-3.5 py-1.5 text-sm font-medium text-forest"
-                    >
-                      {s}
+                  {SIZES.map((s) => (
+                    <li key={s}>
+                      <button
+                        type="button"
+                        onClick={() => toggleSize(s)}
+                        aria-pressed={selectedSizes.includes(s)}
+                        className={cn(
+                          "rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors duration-200",
+                          selectedSizes.includes(s)
+                            ? "border-forest bg-forest text-cream"
+                            : "border-border bg-cream text-forest hover:border-forest/50",
+                        )}
+                      >
+                        {s}
+                      </button>
                     </li>
                   ))}
                 </ul>
                 <p className="mt-2 text-xs text-muted-foreground">
-                  Contact NAVVAM for current pricing on each size.
+                  {selectedSizes.length > 1 ? `${selectedSizes.length} sizes selected · ` : ""}Contact NAVVAM for current pricing.
                 </p>
               </div>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <Button asChild size="lg" className="h-auto max-w-full whitespace-normal py-3 text-center">
+                <Button asChild size="lg">
                   <a
-                    href={productWhatsappUrl(product.name)}
+                    href={cartWhatsappUrl(product.name, selectedSizes)}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <WhatsAppIcon className="shrink-0" />
-                    Enquire about {product.name}
+                    <ShoppingCart aria-hidden="true" className="shrink-0" />
+                    {selectedSizes.length > 0
+                      ? `Order ${selectedSizes.join(", ")} on WhatsApp`
+                      : "Order on WhatsApp"}
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
