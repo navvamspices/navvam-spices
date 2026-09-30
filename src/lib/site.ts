@@ -13,7 +13,7 @@ export const SITE = {
   phonePrimaryHref: "tel:+919133644949",
   phoneSecondary: "+91 89785 60179",
   phoneSecondaryHref: "tel:+918978560179",
-  whatsappNumber: "919133644949",
+  whatsappNumber: "918978560179",
   address: {
     line1: "#156/AA2/2/1/1, Imampur Village",
     line2: "Toopran Road, Medak City",
