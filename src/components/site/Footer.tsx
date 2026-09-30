@@ -95,10 +95,10 @@ export function Footer() {
             <li className="flex items-start gap-2 text-cream/80">
               <span className="mt-0.5 size-4 shrink-0 text-gold">@</span>
               <a
-                href="mailto:trade@navvamspices.com"
+                href="mailto:info@navvamspices.com"
                 className="hover:text-cream hover:underline"
               >
-                trade@navvamspices.com
+                info@navvamspices.com
               </a>
             </li>
             <li className="flex items-start gap-2">
