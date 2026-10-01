@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Flame, Leaf, MapPin, Package, Phone, Sparkles } from "lucide-react";
+import { ExternalLink, Flame, Leaf, MapPin, Package, Phone, ShieldCheck, Sparkles } from "lucide-react";
 import { EnquiryCTA } from "@/components/site/EnquiryCTA";
+import { FssaiLogo, VegBadge } from "@/components/site/FssaiLogo";
 import { ProductCard } from "@/components/site/ProductCard";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
@@ -48,20 +49,20 @@ const PILLARS = [
     body: "Milled at controlled low heat to safeguard precious volatile natural spice oils.",
   },
   {
-    title: "6 Tailored Pack Sizes",
-    body: "Available in 40g, 50g, 100g, 200g, 500g, and 1kg wholesale & retail packs.",
-  },
-  {
     title: "Zero Adulteration",
     body: "No starch, zero artificial food colours, and no exhausted spent residue.",
+  },
+  {
+    title: "FSSAI & GMP Standards",
+    body: "Strict compliance with Food Safety & Standards Act, 2006, GMP hygienic milling, and guaranteed shelf life.",
   },
 ];
 
 const TRUST = [
-  { icon: Leaf, label: `${PRODUCTS.length} products in the range` },
+  { icon: Leaf, label: `${PRODUCTS.length} products (100% Vegetarian)` },
   { icon: Package, label: "Pack sizes: 40g · 50g · 100g · 200g · 500g · 1kg" },
+  { icon: ShieldCheck, label: `FSSAI: ${SITE.fssai.licenseStatus}` },
   { icon: MapPin, label: "Manufactured in Medak, Telangana" },
-  { icon: Sparkles, label: "Blends built around everyday dishes" },
 ];
 
 const PROCESS = [
@@ -217,6 +218,81 @@ function Home() {
             <Button asChild variant="outline" size="lg">
               <Link to="/products">View all {PRODUCTS.length} products</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Food Safety & FSSAI Compliance Section */}
+      <section className="border-t border-border bg-gradient-warm px-4 py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="rounded-3xl border border-sand bg-card p-8 shadow-soft sm:p-12">
+            <Reveal>
+              <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                <div className="max-w-2xl">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="eyebrow text-gold-deep">Food Safety &amp; Regulatory Compliance</span>
+                    <span className="text-muted-foreground">•</span>
+                    <VegBadge />
+                  </div>
+                  <h2 className="mt-3 font-display text-3xl text-forest sm:text-4xl">
+                    Adhering Strictly to FSSAI Standards
+                  </h2>
+                  <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+                    We are committed to delivering safe, high-quality food products that adhere strictly
+                    to the standards set by the Food Safety and Standards Authority of India (FSSAI).
+                  </p>
+                </div>
+
+                <div className="shrink-0 rounded-2xl border border-border bg-white p-4 shadow-sm text-center">
+                  <FssaiLogo className="mx-auto h-12 w-auto" />
+                  <p className="mt-1.5 text-xs font-bold text-forest">
+                    {SITE.fssai.licenseStatus}
+                  </p>
+                  <p className="text-[11px] text-muted-foreground">FoSCoS Reference</p>
+                </div>
+              </div>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="rounded-2xl border border-border bg-cream/70 p-4">
+                  <p className="text-sm font-semibold text-forest">FSS Act, 2006</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    100% compliance with Food Safety &amp; Standards Act, 2006 across all ingredients and blends.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border bg-cream/70 p-4">
+                  <p className="text-sm font-semibold text-forest">Hygienic GMP Facility</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    Processed and packed in clean, hygienic facilities following Good Manufacturing Practices.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border bg-cream/70 p-4">
+                  <p className="text-sm font-semibold text-forest">45+ Days Shelf Life</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    Products dispatched to customers have at least 30% or 45+ days of remaining shelf life.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-border bg-cream/70 p-4">
+                  <p className="text-sm font-semibold text-forest">FoSCoS Verification</p>
+                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                    Verify our license and business registration on official FoSCoS portal (foscos.fssai.gov.in).
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Button asChild variant="gold" size="lg">
+                  <a href={SITE.fssai.foscosPortalUrl} target="_blank" rel="noopener noreferrer">
+                    Verify on FoSCoS Portal
+                    <ExternalLink className="ml-1.5 size-4" />
+                  </a>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/quality" hash="fssai-compliance">
+                    Read Food Safety Details
+                  </Link>
+                </Button>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>

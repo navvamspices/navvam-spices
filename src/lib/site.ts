@@ -14,6 +14,7 @@ export const SITE = {
   phoneSecondary: "+91 89785 60179",
   phoneSecondaryHref: "tel:+918978560179",
   whatsappNumber: "918978560179",
+  email: "info@navvamspices.com",
   address: {
     line1: "#156/AA2/2/1/1, Imampur Village",
     line2: "Toopran Road, Medak City",
@@ -21,6 +22,20 @@ export const SITE = {
     postalCode: "502334",
     country: "India",
     full: "#156/AA2/2/1/1, Imampur Village, Toopran Road, Medak City, Telangana 502334, India",
+  },
+  fssai: {
+    /** FSSAI License Status - applied for licensing reference on FoSCoS */
+    licenseStatus: "Applied for (FoSCoS Under Process)",
+    licenseNumber: "Applied for (FoSCoS Under Process)",
+    /** Registered Business / Company name as per FSSAI certificate */
+    businessName: "NAVVAM Spices & Masalas",
+    /** Registered manufacturing / business address as per FSSAI certificate */
+    address: "#156/AA2/2/1/1, Imampur Village, Toopran Road, Medak City, Telangana 502334, India",
+    /** Official FoSCoS portal verification link */
+    foscosPortalUrl: "https://foscos.fssai.gov.in/",
+    /** Food safety act and standards */
+    act: "Food Safety and Standards Act, 2006",
+    shelfLifeRule: "Minimum 30% or 45+ days remaining shelf life upon dispatch",
   },
 } as const;
 

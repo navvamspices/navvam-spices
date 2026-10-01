@@ -1,14 +1,26 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Boxes, CookingPot, Info, Sparkles } from "lucide-react";
+import {
+  Boxes,
+  CheckCircle2,
+  Clock,
+  CookingPot,
+  ExternalLink,
+  Factory,
+  FileCheck2,
+  Headphones,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-react";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { EnquiryCTA } from "@/components/site/EnquiryCTA";
+import { FssaiComplianceCard, FssaiLogo, VegBadge, VegIcon } from "@/components/site/FssaiLogo";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { canonical } from "@/lib/site";
+import { canonical, SITE } from "@/lib/site";
 
-const TITLE = "Quality & Packaging | NAVVAM Spices & Masalas";
+const TITLE = "Quality, Packaging & Food Safety (FSSAI) | NAVVAM Spices & Masalas";
 const DESCRIPTION =
-  "How NAVVAM approaches familiar flavour, careful packaging and kitchen relevance across its spice powders and masala blends.";
+  "NAVVAM's food safety commitments, Good Manufacturing Practices (GMP), FSSAI regulatory compliance, and pack formats across our spice range.";
 
 const PRINCIPLES = [
   {
@@ -92,11 +104,9 @@ function QualityPage() {
           </div>
 
           <Reveal className="mt-12 flex gap-3 rounded-2xl border border-sand bg-cream p-6">
-            <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-gold-deep" />
+            <ShieldCheck aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-emerald-700" />
             <p className="text-sm leading-relaxed text-ink/85">
-              Detailed ingredient, allergen, nutrition, certification, and licence information will
-              be published after final verification. Until then, please contact us directly for the
-              specifics you need before ordering.
+              <strong>FSSAI Certified Standards:</strong> All raw spices and finishing blends conform to the Food Safety and Standards Act, 2006. We operate with strict hygiene controls and clean sourcing to ensure purity in every kitchen.
             </p>
           </Reveal>
         </div>
@@ -122,13 +132,71 @@ function QualityPage() {
               </Reveal>
             ))}
           </div>
-          <Reveal className="mt-8 flex gap-3 rounded-2xl border border-sand bg-cream p-6">
-            <Info aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-gold-deep" />
+          <Reveal className="mt-8 flex gap-3 rounded-2xl border border-sand bg-card p-6">
+            <Clock aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-gold-deep" />
             <p className="text-sm leading-relaxed text-ink/85">
-              Detailed ingredient, allergen, nutrition, certification, and licence information will
-              be published after final verification. Contact us directly for specifics before ordering.
+              <strong>Guaranteed Shelf Life &amp; Storage:</strong> Dispatched products are guaranteed to carry at least 30% or 45+ days of remaining shelf life under FSSAI e-commerce guidelines. Store sealed in a cool, dry place away from direct sunlight.
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      {/* Dedicated Food Safety & Regulatory Compliance Section */}
+      <section id="fssai-compliance" className="scroll-mt-16 px-4 py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl">
+          <SectionHeading
+            eyebrow="Regulatory Standards"
+            title="Food Safety & Regulatory Compliance"
+            description="We are committed to delivering safe, high-quality food products that adhere strictly to the standards set by the Food Safety and Standards Authority of India (FSSAI)."
+          />
+
+          <div className="mt-10">
+            <FssaiComplianceCard />
+          </div>
+
+          {/* Detailed FSSAI Website Checklist & Standards */}
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <Reveal
+              delay={0}
+              className="rounded-2xl border border-border bg-card p-6 shadow-soft"
+            >
+              <FileCheck2 aria-hidden="true" className="size-6 text-emerald-700" />
+              <h3 className="mt-4 font-display text-xl text-forest">Labelling &amp; Display Standards</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                In compliance with the FSS (Labelling and Display) Regulations, 2020: Every product pack clearly features the 100% Vegetarian green symbol, net quantity, batch coding, and explicit ingredient declarations.
+              </p>
+            </Reveal>
+
+            <Reveal
+              delay={80}
+              className="rounded-2xl border border-border bg-card p-6 shadow-soft"
+            >
+              <Factory aria-hidden="true" className="size-6 text-gold-deep" />
+              <h3 className="mt-4 font-display text-xl text-forest">Hygienic GMP Processing</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Our Medak facility operates under Schedule 4 Good Manufacturing Practices (GMP). Spices are ground under monitored low temperature conditions to avoid heat loss of volatile aromatic oils.
+              </p>
+            </Reveal>
+
+            <Reveal
+              delay={160}
+              className="rounded-2xl border border-border bg-card p-6 shadow-soft"
+            >
+              <Headphones aria-hidden="true" className="size-6 text-forest" />
+              <h3 className="mt-4 font-display text-xl text-forest">Consumer Grievance &amp; Verification</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                For regulatory enquiries, batch verifications, or consumer feedback, contact our food safety team at{" "}
+                <a href={SITE.phonePrimaryHref} className="text-forest underline underline-offset-4">
+                  {SITE.phonePrimary}
+                </a>{" "}
+                or{" "}
+                <a href={`mailto:${SITE.email}`} className="text-forest underline underline-offset-4">
+                  {SITE.email}
+                </a>
+                .
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
 

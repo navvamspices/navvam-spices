@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { Phone, ShoppingCart } from "lucide-react";
+import { CheckCircle2, Clock, ExternalLink, Phone, ShieldCheck, ShoppingCart } from "lucide-react";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { EnquiryCTA } from "@/components/site/EnquiryCTA";
+import { FssaiLicenseBadge, FssaiLogo, VegBadge } from "@/components/site/FssaiLogo";
 import { ProductCard } from "@/components/site/ProductCard";
 import { Reveal } from "@/components/site/Reveal";
 import { WhatsAppIcon } from "@/components/site/WhatsAppButton";
@@ -112,10 +113,17 @@ function ProductDetail() {
             </Reveal>
 
             <Reveal delay={100}>
-              <p className="eyebrow">{categoryLabel(product.category)}</p>
-              <h1 className="mt-3 text-4xl leading-tight text-forest sm:text-5xl">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="eyebrow">{categoryLabel(product.category)}</span>
+                <span className="text-muted-foreground">•</span>
+                <VegBadge />
+              </div>
+              <h1 className="mt-2 text-4xl leading-tight text-forest sm:text-5xl">
                 {product.name}
               </h1>
+              <div className="mt-3">
+                <FssaiLicenseBadge />
+              </div>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
                 {product.description}
               </p>
@@ -200,18 +208,54 @@ function ProductDetail() {
             </p>
           </Reveal>
 
-          <Reveal delay={80} className="rounded-2xl border border-border bg-card p-6">
-            <h2 className="text-xl text-forest">Details on request</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Ingredient, allergen, nutrition, certification and licence information will be
-              published after final verification.
-            </p>
-            <Link
-              to="/quality"
-              className="mt-4 inline-block text-sm font-semibold text-forest underline underline-offset-4"
-            >
-              Read about quality &amp; packaging
-            </Link>
+          <Reveal delay={80} className="rounded-2xl border border-sand bg-card p-6 shadow-soft">
+            <div className="flex items-center justify-between gap-2 border-b border-border pb-3.5">
+              <div className="rounded-md bg-white p-1.5 shadow-2xs">
+                <FssaiLogo className="h-6 w-auto" />
+              </div>
+              <VegBadge />
+            </div>
+
+            <h2 className="mt-3.5 font-display text-lg text-forest">Food Safety &amp; Standards</h2>
+            <div className="mt-3 space-y-2.5 text-xs text-ink/80">
+              <div className="flex items-start gap-2">
+                <ShieldCheck className="size-4 shrink-0 text-emerald-700 mt-0.5" />
+                <span>
+                  <strong>FSSAI Status:</strong> <span className="font-medium text-forest">{SITE.fssai.licenseStatus}</span>
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Clock className="size-4 shrink-0 text-gold-deep mt-0.5" />
+                <span>
+                  <strong>Remaining Shelf Life:</strong> At least 30% or 45+ days upon dispatch.
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="size-4 shrink-0 text-forest mt-0.5" />
+                <span>
+                  <strong>Hygienic GMP:</strong> Clean processing &amp; low-temperature cold grinding.
+                </span>
+              </div>
+            </div>
+
+            <div className="mt-4 flex flex-col gap-2 border-t border-border pt-3.5">
+              <a
+                href={SITE.fssai.foscosPortalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-between text-xs font-medium text-gold-deep hover:underline"
+              >
+                <span>Verify on FoSCoS portal</span>
+                <ExternalLink className="size-3.5" />
+              </a>
+              <Link
+                to="/quality"
+                hash="fssai-compliance"
+                className="inline-block text-xs font-semibold text-forest underline underline-offset-4"
+              >
+                View full compliance commitments →
+              </Link>
+            </div>
           </Reveal>
         </div>
       </section>

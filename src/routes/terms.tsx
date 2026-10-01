@@ -40,10 +40,48 @@ function TermsPage() {
             <h2 className="text-xl text-forest">Accuracy of information</h2>
             <p className="mt-2">
               Product appearance and pack availability may vary. Photography on this site is
-              illustrative and does not represent exact ingredients or pack contents. Ingredient,
-              allergen, nutrition, certification and licence information will be published after
-              final verification — please contact us for current details before ordering.
+              illustrative and represents serving suggestions. All products are processed and packed
+              in strict compliance with FSSAI statutory standards.
             </p>
+          </section>
+          <section>
+            <h2 className="text-xl text-forest">Food Safety &amp; Regulatory Compliance (FSSAI)</h2>
+            <p className="mt-2">
+              {SITE.name} is committed to delivering safe, high-quality food products that adhere strictly
+              to the standards set by the Food Safety and Standards Authority of India (FSSAI).
+            </p>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm">
+              <li>
+                <strong>FSSAI License Status:</strong> {SITE.fssai.licenseStatus}
+              </li>
+              <li>
+                <strong>Business Name:</strong> {SITE.fssai.businessName}
+              </li>
+              <li>
+                <strong>Registered Address:</strong> {SITE.fssai.address}
+              </li>
+              <li>
+                <strong>Statutory Compliance:</strong> All ingredients, milling methods, and finished goods
+                comply with the Food Safety and Standards Act, 2006, processed in hygienic GMP facilities.
+              </li>
+              <li>
+                <strong>Shelf Life:</strong> Products dispatched to customers carry at least 30% or 45+ days
+                of remaining shelf life at the time of delivery.
+              </li>
+              <li>
+                <strong>Official Verification:</strong> License details can be verified on the official FoSCoS
+                portal (
+                <a
+                  href={SITE.fssai.foscosPortalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-forest underline underline-offset-4"
+                >
+                  foscos.fssai.gov.in
+                </a>
+                ).
+              </li>
+            </ul>
           </section>
           <section>
             <h2 className="text-xl text-forest">Enquiries</h2>

@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, Phone } from "lucide-react";
 import { CATEGORIES, PRODUCTS } from "@/data/products";
 import { GENERAL_WHATSAPP_URL, MAPS_DIRECTIONS_URL, SITE } from "@/lib/site";
+import { ExternalLink, MapPin, Phone } from "lucide-react";
+import { FssaiLogo, VegIcon } from "./FssaiLogo";
 import { WhatsAppIcon } from "./WhatsAppButton";
 
 export function Footer() {
@@ -47,6 +48,11 @@ export function Footer() {
             <li>
               <Link to="/quality" className="underline-offset-4 hover:text-cream hover:underline">
                 Quality &amp; Packaging
+              </Link>
+            </li>
+            <li>
+              <Link to="/quality" hash="fssai-compliance" className="underline-offset-4 hover:text-cream hover:underline">
+                Food Safety &amp; FSSAI
               </Link>
             </li>
             <li>
@@ -122,7 +128,58 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-12 flex max-w-6xl flex-col gap-2 border-t border-cream/15 pt-6 text-xs">
+      {/* FSSAI Regulatory Compliance Banner */}
+      <div className="mx-auto mt-12 rounded-2xl border border-cream/20 bg-forest/40 p-5 text-cream/90 backdrop-blur-xs">
+        <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+          <div className="flex items-start gap-3.5">
+            <div className="flex shrink-0 items-center justify-center rounded-xl bg-white p-2 shadow-xs">
+              <FssaiLogo className="h-9 w-auto" />
+            </div>
+            <div>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="font-display text-base text-cream">Food Safety &amp; Regulatory Compliance</span>
+                <span className="inline-flex items-center gap-1 rounded-full border border-emerald-500/40 bg-emerald-950/60 px-2 py-0.5 text-[11px] font-medium text-emerald-300">
+                  <VegIcon className="size-3" />
+                  100% Vegetarian
+                </span>
+              </div>
+              <p className="mt-1 max-w-2xl text-xs leading-relaxed text-cream/75">
+                We strictly adhere to standards set by the Food Safety and Standards Authority of India (FSSAI).
+                All spice powders and blends comply with the Food Safety and Standards Act, 2006, processed in hygienic GMP facilities with guaranteed 45+ days remaining shelf life upon dispatch.
+              </p>
+              <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
+                <span className="font-medium text-gold">
+                  FSSAI Status: <span className="font-semibold text-cream">{SITE.fssai.licenseStatus}</span>
+                </span>
+                <span className="text-cream/40">•</span>
+                <span className="text-cream/80">{SITE.fssai.businessName}</span>
+                <span className="text-cream/40">•</span>
+                <span className="text-cream/70">Medak, Telangana</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex shrink-0 flex-wrap items-center gap-2.5">
+            <a
+              href={SITE.fssai.foscosPortalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-gold/50 bg-gold/15 px-3 py-1.5 text-xs font-medium text-gold hover:bg-gold/25 hover:text-cream transition"
+            >
+              <span>Verify on FoSCoS</span>
+              <ExternalLink className="size-3" />
+            </a>
+            <Link
+              to="/quality"
+              hash="fssai-compliance"
+              className="inline-flex items-center gap-1 text-xs text-cream/80 underline underline-offset-4 hover:text-cream"
+            >
+              FSSAI Commitments
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto mt-8 flex max-w-6xl flex-col gap-2 border-t border-cream/15 pt-6 text-xs">
         <p>
           © {new Date().getFullYear()} {SITE.name}. Catalogue website — pack sizes and product
           details available on enquiry.
@@ -130,9 +187,8 @@ export function Footer() {
         <p className="text-cream/60">
           Zero adulteration · Cold-ground · Sourced from Guntur, Salem &amp; Malabar
         </p>
-        <p className="text-cream/40 text-xs">
-          Detailed ingredient, allergen, nutrition, certification, and licence information will be
-          published after final verification.
+        <p className="text-cream/50 text-xs">
+          Regulated under the Food Safety and Standards Act, 2006. FSSAI License: {SITE.fssai.licenseStatus}. Official verification accessible on the FoSCoS portal (foscos.fssai.gov.in).
         </p>
       </div>
     </footer>

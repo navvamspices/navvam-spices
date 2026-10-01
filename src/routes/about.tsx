@@ -4,7 +4,7 @@ import { EnquiryCTA } from "@/components/site/EnquiryCTA";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { PRODUCTS } from "@/data/products";
-import { canonical } from "@/lib/site";
+import { canonical, SITE } from "@/lib/site";
 import story from "@/assets/story.jpg";
 
 const TITLE = "Our Story | NAVVAM Spices & Masalas, Medak Telangana";
@@ -92,6 +92,14 @@ function AboutPage() {
                 <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   No starch, no artificial food colours, no exhausted spent residue. Ground at
                   controlled low heat to preserve natural volatile oils.
+                </dd>
+              </Reveal>
+              <Reveal delay={300} className="sm:col-span-2">
+                <dt className="font-display text-xl text-forest">FSSAI &amp; Food Safety Standards</dt>
+                <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  Committed to strict adherence with the Food Safety and Standards Act, 2006. All 13
+                  products are 100% vegetarian, processed in clean, hygienic GMP facilities, and
+                  dispatched with a guaranteed minimum 45+ days shelf life. FSSAI License: {SITE.fssai.licenseStatus}.
                 </dd>
               </Reveal>
             </dl>

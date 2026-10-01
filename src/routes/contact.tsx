@@ -1,7 +1,8 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, MapPin, Phone } from "lucide-react";
+import { ExternalLink, Clock, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { FssaiLogo, VegBadge } from "@/components/site/FssaiLogo";
 import { Reveal } from "@/components/site/Reveal";
 import { WhatsAppIcon } from "@/components/site/WhatsAppButton";
 import { Button } from "@/components/ui/button";
@@ -171,6 +172,50 @@ function ContactPage() {
                 <Clock aria-hidden="true" className="size-4 text-gold-deep" />
                 Contact us for current business hours
               </p>
+            </div>
+
+            <div className="rounded-2xl border border-sand bg-cream p-6 shadow-soft">
+              <div className="flex items-center justify-between gap-2 border-b border-border/80 pb-3">
+                <div className="rounded-md bg-white p-1.5 shadow-2xs">
+                  <FssaiLogo className="h-6 w-auto" />
+                </div>
+                <VegBadge />
+              </div>
+              <h2 className="mt-3 font-display text-lg text-forest">Food Safety &amp; Regulatory Redressal</h2>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                For statutory, food safety, or quality verification queries as mandated by FSSAI guidelines:
+              </p>
+              <div className="mt-3 space-y-1.5 text-xs text-ink/80">
+                <p>
+                  <strong>FSSAI Status:</strong> <span className="font-medium text-forest">{SITE.fssai.licenseStatus}</span>
+                </p>
+                <p>
+                  <strong>Registered Entity:</strong> {SITE.fssai.businessName}
+                </p>
+                <p>
+                  <strong>Regulatory Email:</strong>{" "}
+                  <a href={`mailto:${SITE.email}`} className="text-forest underline underline-offset-4">
+                    {SITE.email}
+                  </a>
+                </p>
+                <p>
+                  <strong>Regulatory Phone:</strong>{" "}
+                  <a href={SITE.phonePrimaryHref} className="text-forest underline underline-offset-4">
+                    {SITE.phonePrimary}
+                  </a>
+                </p>
+              </div>
+              <div className="mt-4 border-t border-sand pt-3">
+                <a
+                  href={SITE.fssai.foscosPortalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-deep hover:underline"
+                >
+                  <span>Verify license on FoSCoS portal</span>
+                  <ExternalLink className="size-3" />
+                </a>
+              </div>
             </div>
           </Reveal>
 
